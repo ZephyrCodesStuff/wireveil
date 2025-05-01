@@ -1,0 +1,22 @@
+[package]
+name = "wireveil"
+description = "A firewall for A/D CTF competitions, to selectively block packets base on regexes."
+authors = ["zeph <zeph@zephs.me> [ZephyrCodesStuff]"]
+repository = "https://github.com/ZephyrCodesStuff/wireveil"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.98"
+dotenv = "0.15.0"
+etherparse = "0.18.0"
+figment = { version = "0.10.19", features = ["toml"] }
+hex = "0.4.3"
+libc = "0.2.172"
+nfqueue = "0.9.1"
+regex = "1.11.1"
+serde = { version = "1.0.219", features = ["derive"] }
+thiserror = "2.0.12"
+tokio = { version = "1.44.2", features = ["rt", "rt-multi-thread", "signal"] }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }

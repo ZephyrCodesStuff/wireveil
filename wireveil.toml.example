@@ -1,0 +1,17 @@
+[services]
+
+# Each service has a name, a port, and a block list.
+[services.vuln_http_service]
+
+# The port the service is listening on
+port = 8080
+
+# If a packet matches any of the regexes in the block list, it will be silently dropped.
+block = [
+    "[A-Z0-9]{31}=",
+    "flag{[a-zA-Z0-9]+}",
+]
+
+[services.vuln_tcp_service]
+port = 3000
+block = ["[A-Z0-9]{31}="]
