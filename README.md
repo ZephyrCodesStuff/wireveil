@@ -72,6 +72,16 @@ mv wireveil.toml.example wireveil.toml
 
 3. To stop the application, press `Ctrl+C`. The iptables rules will be cleaned up automatically.
 
+### Troubleshooting
+> `iptables: Bad rule (does a matching rule exist in that chain?)`
+
+Your system might not be running the `nftables` backend.
+
+```bash
+sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
+sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+```
+
 ## Logging
 
 WireVeil uses the `tracing` crate for logging. You can configure the log level using the `RUST_LOG` environment variable. For example:
