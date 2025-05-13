@@ -437,6 +437,7 @@ dependencies = [
 [[package]]
 name = "nfqueue"
 version = "0.9.1"
+source = "git+https://github.com/ZephyrCodesStuff/nfqueue-rs#d26cc5eef28d996d48b7c9bf2867fbef02f50bbb"
 dependencies = [
  "libc",
 ]

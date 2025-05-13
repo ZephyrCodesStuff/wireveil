@@ -1,3 +1,0 @@
-[submodule "nfqueue-rs"]
-	path = nfqueue-rs
-	url = https://github.com/chifflier/nfqueue-rs
