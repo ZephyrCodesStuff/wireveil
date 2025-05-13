@@ -1,8 +1,8 @@
-# Wireveil
+# 🕸️ Wireveil
 
 Wireveil is a firewall designed for A/D CTF competitions. It selectively blocks packets based on configurable regular expressions, providing a flexible and efficient way to enforce network security policies.
 
-## Features
+## ✨ Features
 
 - **Regex-based Packet Filtering**: Define custom regex patterns to block specific packet contents.
 - **Service-specific Rules**: Configure rules for individual services running on different ports.
@@ -11,7 +11,7 @@ Wireveil is a firewall designed for A/D CTF competitions. It selectively blocks 
 - **Low-level NFT Setup**: Uses low level NFT FFI bindings for C to interact with `nftables` safely.
 - **Multiple Instances**: Each Wireveil instance is separated by design, so you can run multiple without conflicts.
 
-## Installation
+## 📦️ Installation
 
 1. Clone the repository:
    ```bash
@@ -31,11 +31,11 @@ Wireveil is a firewall designed for A/D CTF competitions. It selectively blocks 
    cargo build --release
    ```
 
-## Configuration
+## 🔧 Configuration
 
 WireVeil uses a `wireveil.toml` configuration file to define services and their respective rules. An example configuration file is provided as `wireveil.toml.example`.
 
-### Example Configuration
+### 🍱 Example Configuration
 
 ```toml
 [services]
@@ -60,7 +60,7 @@ Rename `wireveil.toml.example` to `wireveil.toml` and modify it as needed:
 mv wireveil.toml.example wireveil.toml
 ```
 
-## Usage
+## ⚡️ Usage
 
 1. Run the application:
    ```bash
@@ -74,7 +74,7 @@ mv wireveil.toml.example wireveil.toml
 
 3. To stop the application, press `Ctrl+C`. The iptables rules will be cleaned up automatically.
 
-### Troubleshooting
+### 🔨 Troubleshooting
 > `iptables: Bad rule (does a matching rule exist in that chain?)`
 
 Your system might not be running the `nftables` backend.
@@ -84,22 +84,22 @@ sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
 sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
 ```
 
-## Logging
+## ✏️ Logging
 
 WireVeil uses the `tracing` crate for logging. You can configure the log level using the `RUST_LOG` environment variable. For example:
 ```bash
 RUST_LOG=debug sudo ./target/release/wireveil
 ```
 
-## Contributing
+## 📝 Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests on the [GitHub repository](https://github.com/ZephyrCodesStuff/wireveil).
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## ❤️ Acknowledgments
 
 - Built with Rust and powered by NFQueue.
 - Inspired by [Firegex](https://github.com/Pwnzer0tt1/firegex)
