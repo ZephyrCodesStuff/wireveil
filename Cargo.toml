@@ -3,8 +3,12 @@ name = "wireveil"
 description = "A firewall for A/D CTF competitions, to selectively block packets base on regexes."
 authors = ["zeph <zeph@zephs.me> [ZephyrCodesStuff]"]
 repository = "https://github.com/ZephyrCodesStuff/wireveil"
-version = "0.1.0"
-edition = "2024"
+version = "1.0.0"
+edition = "2021"
+
+[[bin]]
+name = "wireveil"
+path = "src/main.rs"
 
 [dependencies]
 anyhow = "1.0.98"
@@ -15,7 +19,7 @@ hex = "0.4.3"
 http = "1.3.1"
 httparse = "1.10.1"
 libc = "0.2.172"
-nfqueue = "0.9.1"
+nfqueue = { path = "./nfqueue-rs", version = "0.9.1" }
 regex = "1.11.1"
 serde = { version = "1.0.219", features = ["derive"] }
 thiserror = "2.0.12"
@@ -25,3 +29,8 @@ tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
 url = "2.5.4"
 percent-encoding = "2.3.0"
 urlencoding = "2.1.3"
+nix = { version = "0.30.1", features = ["user"] }
+nftnl = "0.7.0"
+mnl = "0.2.2"
+nftnl-sys = "0.6.2"
+rand = "0.9.1"

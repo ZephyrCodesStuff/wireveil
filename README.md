@@ -8,12 +8,14 @@ Wireveil is a firewall designed for A/D CTF competitions. It selectively blocks 
 - **Service-specific Rules**: Configure rules for individual services running on different ports.
 - **NFQueue Integration**: Uses Linux's NFQueue for packet inspection and verdicts.
 - **Logging and Tracing**: Provides detailed logs for blocked packets and system events.
+- **Low-level NFT Setup**: Uses low level NFT FFI bindings for C to interact with `nftables` safely.
+- **Multiple Instances**: Each Wireveil instance is separated by design, so you can run multiple without conflicts.
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ZephyrCodesStuff/wireveil.git
+   git clone https://github.com/ZephyrCodesStuff/wireveil.git --recursive
    cd wireveil
    ```
 
@@ -101,3 +103,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - Built with Rust and powered by NFQueue.
 - Inspired by [Firegex](https://github.com/Pwnzer0tt1/firegex)
+- Using Mullvad's awesome [nftnl-rs](https://github.com/mullvad/nftnl-rs) bindings for NFT.
+- Implemented [serpilliere's fix](https://github.com/chifflier/nfqueue-rs/pull/21/commits/455c5a1e59963eea96ae73c67d813809b37378c2) for the `nfqueue-rs` library

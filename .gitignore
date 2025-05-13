@@ -2,3 +2,6 @@
 
 .env
 wireveil.toml
+
+# We don't have an icon -- `cargo-appimage` likes to generate this
+icon.png
