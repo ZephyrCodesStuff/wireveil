@@ -15,7 +15,7 @@ Wireveil is a firewall designed for A/D CTF competitions. It selectively blocks 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ZephyrCodesStuff/wireveil.git --recursive
+   git clone https://github.com/ZephyrCodesStuff/wireveil.git
    cd wireveil
    ```
 
