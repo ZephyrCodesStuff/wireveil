@@ -1,4 +1,4 @@
-# 🕸️ Wireveil
+# 🕸️ `wireveil`
 
 Wireveil is a firewall designed for A/D CTF competitions. It selectively blocks packets based on configurable regular expressions, providing a flexible and efficient way to enforce network security policies.
 
